@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -19,12 +19,12 @@ MonoBehaviour:
   crouch: 0
   prone: 0
   walkAxis:
-    positive: 119
+    positive: 122
     negative: 115
     value: 0
   strafeAxis:
     positive: 100
-    negative: 97
+    negative: 113
     value: 0
   leanAxis:
     positive: 101
