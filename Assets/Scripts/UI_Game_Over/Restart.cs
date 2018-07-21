@@ -20,6 +20,7 @@ public Button quit;
 	void TaskOnClick (){
 		SceneManager.LoadScene("Main_Menu");
 		Time.timeScale = 1.0F;
+		Cursor.visible = true;
 	}
 
 	void TaskOnClick2 (){

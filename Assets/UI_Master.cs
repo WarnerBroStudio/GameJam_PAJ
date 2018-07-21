@@ -25,12 +25,14 @@ public class UI_Master : MonoBehaviour {
 		if (Input.GetKeyDown("escape")){
 			UI_pause.SetActive(true);
 			Time.timeScale = 0.0F;
+			Cursor.visible = true;
 		}
 	}
 
 	void TaskOnClick0(){
 		UI_pause.SetActive(false);
 		Time.timeScale = 1.0F;
+		Cursor.visible = false;
 	}
 
 	void TaskOnClick1(){
