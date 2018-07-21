@@ -43,10 +43,10 @@ public class Map : MonoBehaviour {
         };
       }
     }
-    // this.wallsVertical[2][1].GetComponentInChildren<Switch> ().toggleState (this.players[0]);
-    // this.wallsVertical[2][2].GetComponentInChildren<Switch> ().toggleState (this.players[0]);
-    // this.wallsHorizontal[1][1].GetComponentInChildren<Switch> ().toggleState (this.players[0]);
-    // this.wallsHorizontal[2][1].GetComponentInChildren<Switch> ().toggleState (this.players[0]);
+    this.wallsVertical[2][1].GetComponentInChildren<Switch> ().toggleState (this.players[0]);
+    this.wallsVertical[2][2].GetComponentInChildren<Switch> ().toggleState (this.players[0]);
+    this.wallsHorizontal[1][1].GetComponentInChildren<Switch> ().toggleState (this.players[0]);
+    this.wallsHorizontal[2][1].GetComponentInChildren<Switch> ().toggleState (this.players[0]);
     // this.onWallChange ();
   }
 
@@ -62,15 +62,17 @@ public class Map : MonoBehaviour {
           if (switchComponent.player) {
             bool full = true;
             if (
-              z + 1 >= this.wallsHorizontal.Length ||
-              z + 1 >= this.wallsVertical.Length ||
+              (z + 1 >= this.wallsHorizontal.Length &&
+              z + 1 >= this.wallsVertical.Length) ||
               this.wallsHorizontal[z + 1][x].GetComponentInChildren<Switch> ().player != switchComponent.player ||
               this.wallsVertical[z + 1][x + 1].GetComponentInChildren<Switch> ().player != switchComponent.player ||
               this.wallsVertical[z + 1][x].GetComponentInChildren<Switch> ().player != switchComponent.player
             ) {
               full = false;
             }
-            if (full) switchComponent.player.score++;
+            if (full) {
+              switchComponent.player.score++;
+            }
           }
         }
       }
