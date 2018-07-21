@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour {
 	public InputField heigth;
 	public int intwidth;
 	public int intheigth;
+	public Slider slider;
+	public float difficult;
 
 	void Start () {
 		
@@ -18,6 +20,7 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 		intwidth = int.Parse(width.text);
 		intheigth = int.Parse(heigth.text);
+		difficult = slider.value;
 	}
 
 	void Awake(){
