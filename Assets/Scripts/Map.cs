@@ -88,22 +88,26 @@ public class Map : MonoBehaviour {
 
   public IEnumerator Bot () {
     System.Random aleatoire = new System.Random ();
-    int direction = aleatoire.Next (0, 2);
-    bool isNotEmpty = false;
-    if (direction == 0) {
-      int z = aleatoire.Next (0, this.height);
-      int x = aleatoire.Next (0, this.width - 1);
-      if (this.wallsHorizontal[z][x].GetComponentInChildren<Switch> ().player == this.players[1]) isNotEmpty = true;
-      this.wallsHorizontal[z][x].GetComponentInChildren<Switch> ().toggleState (this.players[1]);
-    } else {
-      int z = aleatoire.Next (1, this.height);
-      int x = aleatoire.Next (0, this.width);
-      if (this.wallsVertical[z][x].GetComponentInChildren<Switch> ().player == this.players[1]) isNotEmpty = true;
-      this.wallsVertical[z][x].GetComponentInChildren<Switch> ().toggleState (this.players[1]);
+    while (true) {
+      int direction = aleatoire.Next (0, 2);
+      bool alreadyAllocated = false;
+      if (direction == 0) {
+        int z = aleatoire.Next (0, this.height);
+        int x = aleatoire.Next (0, this.width - 1);
+        if (this.wallsHorizontal[z][x].GetComponentInChildren<Switch> ().player == this.players[1]) alreadyAllocated = true;
+        this.wallsHorizontal[z][x].GetComponentInChildren<Switch> ().toggleState (this.players[1]);
+      } else {
+        int z = aleatoire.Next (1, this.height);
+        int x = aleatoire.Next (0, this.width);
+        if (this.wallsVertical[z][x].GetComponentInChildren<Switch> ().player == this.players[1]) alreadyAllocated = true;
+        this.wallsVertical[z][x].GetComponentInChildren<Switch> ().toggleState (this.players[1]);
+      }
+      if (!alreadyAllocated) {
+        yield return new WaitForSeconds (1.5f);
+      } else {
+        yield return new WaitForSeconds (0.3f);
+      }
+
     }
-    if (!isNotEmpty) {
-      yield return new WaitForSeconds (0.1f);
-    }
-    StartCoroutine (this.Bot ());
   }
 }
