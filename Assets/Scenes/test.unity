@@ -410,11 +410,6 @@ Prefab:
       propertyPath: m_Sources.Array.data[0].sourceTransform
       value: 
       objectReference: {fileID: 951221776}
-    - target: {fileID: 114521549319216982, guid: 0787325bbe6c1214d821187c008bb290,
-        type: 2}
-      propertyPath: constraints.sprint
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0787325bbe6c1214d821187c008bb290, type: 2}
   m_IsPrefabAsset: 0
