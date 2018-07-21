@@ -43,10 +43,10 @@ public class Map : MonoBehaviour {
         };
       }
     }
-    this.wallsVertical[2][1].GetComponentInChildren<Switch> ().toggleState (this.players[0]);
-    this.wallsVertical[2][2].GetComponentInChildren<Switch> ().toggleState (this.players[0]);
-    this.wallsHorizontal[1][1].GetComponentInChildren<Switch> ().toggleState (this.players[0]);
-    this.wallsHorizontal[2][1].GetComponentInChildren<Switch> ().toggleState (this.players[0]);
+    // this.wallsVertical[2][1].GetComponentInChildren<Switch> ().toggleState (this.players[0]);
+    // this.wallsVertical[2][2].GetComponentInChildren<Switch> ().toggleState (this.players[0]);
+    // this.wallsHorizontal[1][1].GetComponentInChildren<Switch> ().toggleState (this.players[0]);
+    // this.wallsHorizontal[2][1].GetComponentInChildren<Switch> ().toggleState (this.players[0]);
     // this.onWallChange ();
   }
 
