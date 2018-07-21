@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ public class Map : MonoBehaviour {
   public Player[] players;
   private int width = 0;
   private int height = 0;
+  public Coroutine coroutine;
 
   void Start () {
     this.width = this.width != 0 ? this.width + 1 : 5;
@@ -43,6 +45,8 @@ public class Map : MonoBehaviour {
         };
       }
     }
+
+    StartCoroutine (Bot ());
     // this.wallsVertical[2][1].GetComponentInChildren<Switch> ().toggleState (this.players[0]);
     // this.wallsVertical[2][2].GetComponentInChildren<Switch> ().toggleState (this.players[0]);
     // this.wallsHorizontal[1][1].GetComponentInChildren<Switch> ().toggleState (this.players[0]);
@@ -63,7 +67,7 @@ public class Map : MonoBehaviour {
             bool full = true;
             if (
               (z + 1 >= this.wallsHorizontal.Length &&
-              z + 1 >= this.wallsVertical.Length) ||
+                z + 1 >= this.wallsVertical.Length) ||
               this.wallsHorizontal[z + 1][x].GetComponentInChildren<Switch> ().player != switchComponent.player ||
               this.wallsVertical[z + 1][x + 1].GetComponentInChildren<Switch> ().player != switchComponent.player ||
               this.wallsVertical[z + 1][x].GetComponentInChildren<Switch> ().player != switchComponent.player
@@ -80,5 +84,26 @@ public class Map : MonoBehaviour {
     for (int i = 0; i < this.players.Length; i++) {
       this.players[i].updateScore ();
     }
+  }
+
+  public IEnumerator Bot () {
+    System.Random aleatoire = new System.Random ();
+    int direction = aleatoire.Next (0, 2);
+    bool isNotEmpty = false;
+    if (direction == 0) {
+      int z = aleatoire.Next (0, this.height);
+      int x = aleatoire.Next (0, this.width - 1);
+      if (this.wallsHorizontal[z][x].GetComponentInChildren<Switch> ().player == this.players[1]) isNotEmpty = true;
+      this.wallsHorizontal[z][x].GetComponentInChildren<Switch> ().toggleState (this.players[1]);
+    } else {
+      int z = aleatoire.Next (1, this.height);
+      int x = aleatoire.Next (0, this.width);
+      if (this.wallsVertical[z][x].GetComponentInChildren<Switch> ().player == this.players[1]) isNotEmpty = true;
+      this.wallsVertical[z][x].GetComponentInChildren<Switch> ().toggleState (this.players[1]);
+    }
+    if (!isNotEmpty) {
+      yield return new WaitForSeconds (0.1f);
+    }
+    StartCoroutine (this.Bot ());
   }
 }

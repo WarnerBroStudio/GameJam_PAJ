@@ -9,8 +9,10 @@ public class Player : MonoBehaviour {
 	public String name;
 	public int score = 0;
 	public Text scoreText;
-
+	public Color color;
 	public void updateScore () {
-		this.scoreText.text = "Score: " + this.score;
+		if(this.scoreText) {
+			this.scoreText.text = "Score: " + this.score;
+		}
 	}
 }

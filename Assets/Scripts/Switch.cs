@@ -27,7 +27,7 @@ public class Switch : MonoBehaviour {
   }
 
   public void toggleState (Player player) {
-    rend.material.color = Color.blue;
+    rend.material.color = player.color;
     this.player = player;
     this.map.onWallChange ();
   }
