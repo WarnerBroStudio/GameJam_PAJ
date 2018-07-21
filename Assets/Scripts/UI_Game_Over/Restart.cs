@@ -19,6 +19,7 @@ public Button quit;
 
 	void TaskOnClick (){
 		SceneManager.LoadScene("Main_Menu");
+		Time.timeScale = 1.0F;
 	}
 
 	void TaskOnClick2 (){
