@@ -8,9 +8,12 @@ public class Player : MonoBehaviour {
 	public GameObject Camera;
 	public String name;
 	public int score = 0;
-	public Text scoreText;
+	public Text[] scoreText;
+	
 
 	public void updateScore () {
-		this.scoreText.text = "Score: " + this.score;
+		for (int i = 0; i < this.scoreText.Length; i++) {
+			this.scoreText[i].text = "Score: " + this.score;	
+		}
 	}
 }

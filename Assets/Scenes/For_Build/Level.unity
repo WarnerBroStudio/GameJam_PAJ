@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -239,26 +239,16 @@ Prefab:
       propertyPath: m_Sources.Array.data[0].sourceTransform
       value: 
       objectReference: {fileID: 1719690592}
-    - target: {fileID: 114723753516911868, guid: 0787325bbe6c1214d821187c008bb290,
+    - target: {fileID: 114098624230794100, guid: 0787325bbe6c1214d821187c008bb290,
         type: 2}
-      propertyPath: Camera
+      propertyPath: chrono
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 114995998135789286, guid: 0787325bbe6c1214d821187c008bb290,
+        type: 2}
+      propertyPath: reprendre
       value: 
-      objectReference: {fileID: 1336780093}
-    - target: {fileID: 114358478054437940, guid: 0787325bbe6c1214d821187c008bb290,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114358478054437940, guid: 0787325bbe6c1214d821187c008bb290,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114358478054437940, guid: 0787325bbe6c1214d821187c008bb290,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1671381104}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0787325bbe6c1214d821187c008bb290, type: 2}
   m_IsPrefabAsset: 0
@@ -321,13 +311,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1139803699}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &1170231713
 Prefab:
   m_ObjectHideFlags: 0
@@ -391,26 +381,9 @@ Prefab:
       propertyPath: m_Name
       value: Wall (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 4399165044384706, guid: e02357199cd43ce46af1bfc2c2094a2a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4947979428096148, guid: e02357199cd43ce46af1bfc2c2094a2a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.002
-      objectReference: {fileID: 0}
-    - target: {fileID: 4921901085952830, guid: e02357199cd43ce46af1bfc2c2094a2a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -0.033
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e02357199cd43ce46af1bfc2c2094a2a, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1336780093 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1637037851981702, guid: 0787325bbe6c1214d821187c008bb290,
-    type: 2}
-  m_PrefabInternal: {fileID: 1088279106}
 --- !u!1 &1430761470 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1375439328234964, guid: 0787325bbe6c1214d821187c008bb290,
@@ -532,7 +505,7 @@ MonoBehaviour:
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
-  m_CancelButton: Cancel
+  m_CancelButton: n
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
@@ -568,6 +541,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1463487999089202, guid: e02357199cd43ce46af1bfc2c2094a2a,
     type: 2}
   m_PrefabInternal: {fileID: 1170231713}
+--- !u!114 &1671381104 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114616861968215980, guid: 0787325bbe6c1214d821187c008bb290,
+    type: 2}
+  m_PrefabInternal: {fileID: 1088279106}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &1674696884 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114723753516911868, guid: 0787325bbe6c1214d821187c008bb290,
