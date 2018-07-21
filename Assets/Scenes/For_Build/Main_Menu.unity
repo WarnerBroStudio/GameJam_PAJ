@@ -1239,6 +1239,8 @@ MonoBehaviour:
   heigth: {fileID: 177418277}
   intwidth: 0
   intheigth: 0
+  slider: {fileID: 0}
+  difficult: 0
 --- !u!4 &1329856689
 Transform:
   m_ObjectHideFlags: 0
