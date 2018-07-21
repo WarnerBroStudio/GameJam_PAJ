@@ -11,8 +11,8 @@ public class Map : MonoBehaviour {
   private int width = 0;
   private int height = 0;
   public Coroutine coroutine;
-
   void Start () {
+    Debug.Log(GameManager.intwidth);
     this.width = this.width != 0 ? this.width + 1 : 5;
     this.height = this.height != 0 ? this.height + 1 : 5;
 
