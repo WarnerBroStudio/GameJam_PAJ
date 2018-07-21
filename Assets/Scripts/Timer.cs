@@ -15,7 +15,7 @@ public int chrono;
 	
 	// Update is called once per frame
 	void Time () {
-		chrono++;
+		chrono--;
 		Texte.text = "Time : " + chrono;
 	}
 }
