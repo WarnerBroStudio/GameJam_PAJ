@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.38073993, b: 0.35872695, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -137,6 +137,103 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restart: {fileID: 142265653}
   quit: {fileID: 957294500}
+--- !u!1 &195784946
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 195784947}
+  - component: {fileID: 195784951}
+  - component: {fileID: 195784950}
+  - component: {fileID: 195784949}
+  - component: {fileID: 195784948}
+  m_Layer: 0
+  m_Name: Door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &195784947
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195784946}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 1.5, z: -5}
+  m_LocalScale: {x: 1, y: 3, z: 2}
+  m_Children: []
+  m_Father: {fileID: 2107251405}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &195784948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195784946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e07591bab1658403a8b28de21e7e5fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &195784949
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195784946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &195784950
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195784946}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &195784951
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195784946}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &201057351
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,15 +774,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4884592736776570, guid: e02357199cd43ce46af1bfc2c2094a2a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -135
+      value: 135
       objectReference: {fileID: 0}
     - target: {fileID: 4884592736776570, guid: e02357199cd43ce46af1bfc2c2094a2a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.375
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4884592736776570, guid: e02357199cd43ce46af1bfc2c2094a2a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 5.757
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4884592736776570, guid: e02357199cd43ce46af1bfc2c2094a2a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -880,7 +977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b1efcf0e443843d9aa5c56a43798428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallInstance: {fileID: 0}
+  wallInstance: {fileID: 2107251404}
 --- !u!1 &2030979841 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1278071929935368, guid: bd11ca6d73b839041bf35d862047520d,
@@ -928,3 +1025,13 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0787325bbe6c1214d821187c008bb290, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &2107251404 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1463487999089202, guid: e02357199cd43ce46af1bfc2c2094a2a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1631095512}
+--- !u!4 &2107251405 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4884592736776570, guid: e02357199cd43ce46af1bfc2c2094a2a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1631095512}
