@@ -9,11 +9,11 @@ public class Player : MonoBehaviour {
 	public String name;
 	public int score = 0;
 	public Text[] scoreText;
-	
+	public Color color;
 
 	public void updateScore () {
 		for (int i = 0; i < this.scoreText.Length; i++) {
-			this.scoreText[i].text = "Score: " + this.score;	
+			this.scoreText[i].text = "Score: " + this.score;
 		}
 	}
 }

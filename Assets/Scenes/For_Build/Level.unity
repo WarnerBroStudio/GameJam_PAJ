@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667555, g: 0.4842717, b: 0.56452394, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -249,6 +249,21 @@ Prefab:
       propertyPath: reprendre
       value: 
       objectReference: {fileID: 1671381104}
+    - target: {fileID: 114723753516911868, guid: 0787325bbe6c1214d821187c008bb290,
+        type: 2}
+      propertyPath: color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114723753516911868, guid: 0787325bbe6c1214d821187c008bb290,
+        type: 2}
+      propertyPath: color.g
+      value: 0.20727015
+      objectReference: {fileID: 0}
+    - target: {fileID: 114723753516911868, guid: 0787325bbe6c1214d821187c008bb290,
+        type: 2}
+      propertyPath: color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0787325bbe6c1214d821187c008bb290, type: 2}
   m_IsPrefabAsset: 0
@@ -536,6 +551,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1615409456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1615409458}
+  - component: {fileID: 1615409457}
+  m_Layer: 0
+  m_Name: Enemy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1615409457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1615409456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de31beb688826409e80e461198235433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camera: {fileID: 0}
+  name: 
+  score: 0
+  scoreText: []
+  color: {r: 1, g: 0, b: 0, a: 0}
+--- !u!4 &1615409458
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1615409456}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.1280304, y: -1.6735805, z: -8.19043}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1627524941 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1463487999089202, guid: e02357199cd43ce46af1bfc2c2094a2a,
@@ -611,6 +671,7 @@ MonoBehaviour:
   wallInstance: {fileID: 1627524941}
   players:
   - {fileID: 1674696884}
+  - {fileID: 1615409457}
 --- !u!4 &1936781285
 Transform:
   m_ObjectHideFlags: 0
