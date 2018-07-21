@@ -17,6 +17,7 @@ public class Main_Menu : MonoBehaviour {
 
 	void TaskOnClick () {
 		SceneManager.LoadScene ("Level");
+		Time.timeScale = 1.0F;
 	}
 
 	void TaskOnClick2 () {
