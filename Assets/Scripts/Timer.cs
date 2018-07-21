@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Timer : MonoBehaviour {
-public Text Texte;
-public int chrono;
-public bool death;
-public GameObject UI_death;
+	public Text Texte;
+	public int chrono;
+	public bool death;
+	public GameObject UI_death;
 
 	// Use this for initialization
 	void Start () {
