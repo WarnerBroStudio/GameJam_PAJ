@@ -717,7 +717,7 @@ Prefab:
     - target: {fileID: 223391873363789190, guid: a4981c67853fe424c8ce8c86c38d019a,
         type: 2}
       propertyPath: m_PlaneDistance
-      value: 0.4
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114176315351214796, guid: a4981c67853fe424c8ce8c86c38d019a,
         type: 2}
