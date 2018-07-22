@@ -11,8 +11,14 @@ public class Map : MonoBehaviour {
   private int width = 0;
   private int height = 0;
   public Coroutine coroutine;
+  public float difficult;
   void Start () {
-    Debug.Log(GameManager.intwidth);
+    this.width = GameManager.intwidth;
+    this.height = GameManager.intheight;
+    if (GameManager.difficult == 0f) this.difficult = 2.5f;
+    if (GameManager.difficult == 1f) this.difficult = 1.5f;
+    if (GameManager.difficult == 2f) this.difficult = 1f;
+
     this.width = this.width != 0 ? this.width + 1 : 5;
     this.height = this.height != 0 ? this.height + 1 : 5;
 
@@ -103,7 +109,7 @@ public class Map : MonoBehaviour {
         this.wallsVertical[z][x].GetComponentInChildren<Switch> ().toggleState (this.players[1]);
       }
       if (!alreadyAllocated) {
-        yield return new WaitForSeconds (1.5f);
+        yield return new WaitForSeconds (this.difficult);
       } else {
         yield return new WaitForSeconds (0.3f);
       }
