@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour {
 	public bool death;
 	public GameObject UI_death;
 	public Player enemy;
+	public GameObject UI_Plauer;
 
 	void Start () {
 		InvokeRepeating ("Timing", 1f, 1f);
@@ -20,6 +21,7 @@ public class Timer : MonoBehaviour {
 		Texte.text = "Temps : " + chrono;
 		if (chrono == 0) { death = true; }
 		if (death == true) {
+			UI_Plauer.SetActive(false);
 			UI_death.SetActive (true);
 			Time.timeScale = 0.0F;
 			Cursor.visible = true;

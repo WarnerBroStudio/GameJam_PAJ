@@ -465,7 +465,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Choix de la largeur de la grille
+  m_Text: 'Choix de la largeur de la grille (defaut : 5)'
 --- !u!222 &234791959
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1237,10 +1237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: {fileID: 599391451}
   heigth: {fileID: 177418277}
-  intwidth: 0
-  intheigth: 0
   slider: {fileID: 0}
-  difficult: 0
 --- !u!4 &1329856689
 Transform:
   m_ObjectHideFlags: 0
@@ -1321,7 +1318,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Taille de la hauteur de la grille
+  m_Text: 'Choix de la hauteur de la grille (defaut : 5)'
 --- !u!222 &1421141054
 CanvasRenderer:
   m_ObjectHideFlags: 0
