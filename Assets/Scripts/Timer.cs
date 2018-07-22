@@ -12,7 +12,6 @@ public class Timer : MonoBehaviour {
 
 	void Start () {
 		InvokeRepeating ("Timing", 1f, 1f);
-		Texte = GetComponent<Text> ();
 	}
 
 	void Timing () { chrono--; }
