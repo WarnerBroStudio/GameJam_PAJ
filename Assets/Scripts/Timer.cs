@@ -8,6 +8,7 @@ public class Timer : MonoBehaviour {
 	public int chrono;
 	public bool death;
 	public GameObject UI_death;
+	public Player enemy;
 
 	void Start () {
 		InvokeRepeating ("Timing", 1f, 1f);
@@ -17,11 +18,12 @@ public class Timer : MonoBehaviour {
 	void Timing () { chrono--; }
 
 	void Update () {
-		Texte.text = "Time : " + chrono;
+		Texte.text = "Temps : " + chrono;
 		if (chrono == 0) { death = true; }
 		if (death == true) {
 			UI_death.SetActive (true);
 			Time.timeScale = 0.0F;
+			Cursor.visible = true;
 		}
 	}
 

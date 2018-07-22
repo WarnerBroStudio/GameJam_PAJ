@@ -7,7 +7,7 @@ public class Scroll_Map : MonoBehaviour {
 
 	void Update () {
 		if (Input.GetAxis ("Mouse ScrollWheel") > 0F) {
-			if (Camera.transform.position.y <= 200) {
+			if (Camera.transform.position.y <= 100) {
 				Camera.transform.position += Vector3.up * 10F;
 			}
 		}

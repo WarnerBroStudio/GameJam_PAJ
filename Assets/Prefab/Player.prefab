@@ -299,6 +299,8 @@ GameObject:
   - component: {fileID: 136256779871993008}
   - component: {fileID: 54712660287245640}
   - component: {fileID: 114723753516911868}
+  - component: {fileID: 81081772030469914}
+  - component: {fileID: 82656473573483282}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -834,6 +836,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 2
+--- !u!81 &81081772030469914
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1506231557709458}
+  m_Enabled: 1
 --- !u!81 &81544600694647488
 AudioListener:
   m_ObjectHideFlags: 1
@@ -848,6 +857,101 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1596096442941342}
   m_Enabled: 1
+--- !u!82 &82656473573483282
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1506231557709458}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: df976348ba1b8524fb54ff0b36fc7fb3, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &114001631541997810
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -983,9 +1087,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Texte: {fileID: 114282144142200484}
-  chrono: 2
+  chrono: 120
   death: 0
   UI_death: {fileID: 1350767698564416}
+  enemy: {fileID: 0}
 --- !u!114 &114100732881937006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1018,7 +1123,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You are Blue
+  m_Text: Equipe Bleu
 --- !u!114 &114127653372154560
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1279,7 +1384,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Time: '
+  m_Text: 'Temps :'
 --- !u!114 &114358478054437940
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1975,6 +2080,7 @@ MonoBehaviour:
   scoreText:
   - {fileID: 114969869256925290}
   - {fileID: 114978487502829640}
+  color: {r: 0, g: 0.20727015, b: 1, a: 0}
 --- !u!114 &114750151325003506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2327,7 +2433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI_pause: {fileID: 1734043066114228}
   UI_Player: {fileID: 1127236256674572}
-  restart: {fileID: 114616861968215980}
+  reprendre: {fileID: 114616861968215980}
   MainMenu: {fileID: 114189946450796068}
   quit: {fileID: 114084532497031460}
 --- !u!136 &136256779871993008
