@@ -10,7 +10,7 @@ public class Main_Menu : MonoBehaviour {
 
 	void Start () {
 		Button btn1 = play.GetComponent<Button> ();
-		Button btn2 = quit.GetComponent<Button> ();
+		Button btn2 = quit.GetComponent<Button> ();	
 		btn1.onClick.AddListener (TaskOnClick);
 		btn2.onClick.AddListener (TaskOnClick2);
 	}
@@ -19,6 +19,7 @@ public class Main_Menu : MonoBehaviour {
 		SceneManager.LoadScene ("Level");
 		Time.timeScale = 1.0F;
 		Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Locked;
 	}
 
 	void TaskOnClick2 () {

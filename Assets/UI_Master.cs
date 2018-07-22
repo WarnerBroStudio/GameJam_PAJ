@@ -26,6 +26,7 @@ public class UI_Master : MonoBehaviour {
 			UI_pause.SetActive(true);
 			Time.timeScale = 0.0F;
 			Cursor.visible = true;
+			Cursor.lockState = CursorLockMode.None;
 		}
 	}
 
@@ -33,12 +34,14 @@ public class UI_Master : MonoBehaviour {
 		UI_pause.SetActive(false);
 		Time.timeScale = 1.0F;
 		Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Locked;
 	}
 
 	void TaskOnClick1(){
 		Time.timeScale = 1.0F;
 		SceneManager.LoadScene("Main_Menu");
 		Time.timeScale = 1.0F;
+		Cursor.lockState = CursorLockMode.None;
 	}
 
 	void TaskOnClick2(){

@@ -25,6 +25,10 @@ public class Timer : MonoBehaviour {
 			UI_death.SetActive (true);
 			Time.timeScale = 0.0F;
 			Cursor.visible = true;
+			Cursor.lockState = CursorLockMode.None;
+			{
+				
+			}
 		}
 	}
 
